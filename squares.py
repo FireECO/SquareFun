@@ -1,3 +1,5 @@
+import sys
+
 def print_squares(n):
     if n > 0:
         print('+' + '--------' + '--+')
