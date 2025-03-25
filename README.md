@@ -7,4 +7,4 @@ If you've ever dreamed of seeing squares made of text, your time has come.
 ## 🎮 Usage  
 Run the script in your terminal:  
 ```sh
-python3 squares.py 69
+python3 squares.py 7
