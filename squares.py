@@ -8,7 +8,12 @@ def print_squares(n):
         print('   ' * i + '|' + '        ' + '  |' + ('  |' if i < n - 1 else '') + ('--+' if i < n - 2 else ''))
         print('   ' * i + '+' + '--------' + '--+' + ('  |' if i < n - 1 else '') + ('  |' if i < n - 2 else ''))
 
-for i in range(0, 10):
-    print(i, ':')
-    print_squares(i)
-    print('')
+if __name__ == "__main__":
+    try:
+        n = int(sys.argv[1]) if len(sys.argv) > 1 else 3
+        if n < 0:
+            raise ValueError
+    except (ValueError, IndexError):
+        print("Usage: python3 squares.py [n] (where n is a positive integer)")
+        sys.exit(1)
+    print_squares(n)
